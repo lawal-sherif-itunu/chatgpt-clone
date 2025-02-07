@@ -125,7 +125,7 @@ img.material-symbols-rounded {
   width: 100%;
   display: flex;
   padding: 20px 10px;
-  justify-content: center;
+  justify-content: space-between;
   background: var(--outgoing-chat-bg);
   border: 1px soid var(--incoming-chat-border);
 }
@@ -161,24 +161,24 @@ img.material-symbols-rounded {
   color: var(--placeholder-color);
 }
 
-.typing-textarea svg {
+.typing-textarea span {
   position: absolute;
   right: 0;
   bottom: 0;
   visibility: hidden;
 }
 
-.typing-textarea textarea:valid ~ svg {
+.typing-textarea textarea:valid ~ span {
   visibility: visible;
 }
 
-.typing-textarea svg {
+.typing-textarea span {
   position: absolute;
   right: 0;
   bottom: 0;
 }
 
-.typing-content svg {
+.typing-content span {
   height: 50px;
   width: 55px;
   display: flex;
@@ -191,7 +191,7 @@ img.material-symbols-rounded {
   display: flex;
 }
 
-.typing-controls svg {
+.typing-controls span {
   margin-left: 7px;
   font-size: 1.4rem;
   border-radius: 4px;
