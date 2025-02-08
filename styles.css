@@ -6,6 +6,17 @@
 }
 
 :root {
+  --text-color: #343541;
+  --icon-color: #a9a9bc;
+  --icon-hover-bg: #f1f1f3;
+  --placeholder-color: #9f9f9f;
+  --outgoing-chat-bg: #fff;
+  --incoming-chat-bg: #f7f7f8;
+  --outgoing-chat-border: #fff;
+  --incoming-chat-border: #d9d9e3;
+}
+
+.darkmode {
   --text-color: #fff;
   --icon-color: #acacbe;
   --icon-hover-bg: #5b5e71;
@@ -15,17 +26,6 @@
   --outgoing-chat-border: #343541;
   --incoming-chat-border: #444654;
 }
-
-.light-mode {
-    --text-color: #343541;
-    --icon-color: #a9a9bc;
-    --icon-hover-bg: #f1f1f3;
-    --placeholder-color: #9F9F9F;
-    --outgoing-chat-bg: #FFF;
-    --incoming-chat-bg: #F7F7F8;
-    --outgoing-chat-border: #FFF;
-    --incoming-chat-border: #D9D9E3;
-  }
 
 body {
   background-color: var(--outgoing-chat-bg);
@@ -208,4 +208,8 @@ img.material-symbols-rounded {
   border-radius: 4px;
   background-color: var(--incoming-chat-bg);
   border: 1px solid var(--incoming-chat-border);
+}
+
+span {
+  cursor: pointer;
 }
