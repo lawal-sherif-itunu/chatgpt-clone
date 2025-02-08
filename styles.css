@@ -72,7 +72,8 @@ body {
   align-items: center;
 }
 
-.chat .chat-details img {
+.chat .chat-details img,
+.teammate-details img {
   width: 35px;
   height: 35px;
   object-fit: cover;
@@ -212,4 +213,83 @@ img.material-symbols-rounded {
 
 span {
   cursor: pointer;
+}
+
+.typing-container,
+.chat-container {
+  display: none;
+}
+
+.info_box {
+  z-index: 99999999999999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.teammate {
+  display: flex;
+  height: 10rem;
+  gap: 0.5rem;
+}
+
+img.team-image {
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+  margin-top: 1.5rem;
+}
+
+.teammate-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-items: center;
+  gap: 0.5rem;
+}
+
+.github-profile,
+.x-profile {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info-page,
+a,
+.info_title span {
+  color: var(--text-color);
+  /* max-width: 10rem; */
+}
+
+.info_title {
+  padding: 1rem;
+  border-radius: 15px;
+}
+
+.info_title span {
+  font-size: 1.5rem;
+}
+.info_title {
+  margin-bottom: 1.5rem;
+}
+
+.continue-buttons button {
+  padding: 0.5rem 2rem;
+  border-radius: 5px;
+  margin-right: 2rem;
+}
+
+.continue-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+span.material-icons {
+  color: var(--text-color);
 }
