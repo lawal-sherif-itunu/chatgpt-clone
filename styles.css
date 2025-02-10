@@ -342,7 +342,7 @@ span.material-icons {
 .typing-textarea textarea,
 .typing-textarea {
   height: 50px;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .typing-textarea textarea {
