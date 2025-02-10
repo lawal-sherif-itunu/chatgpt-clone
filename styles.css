@@ -16,7 +16,7 @@
   --incoming-chat-border: #d9d9e3;
 }
 
-.darkmode {
+/* .darkmode {
   --text-color: #fff;
   --icon-color: #acacbe;
   --icon-hover-bg: #5b5e71;
@@ -25,7 +25,7 @@
   --incoming-chat-bg: #444654;
   --outgoing-chat-border: #343541;
   --incoming-chat-border: #444654;
-}
+} */
 
 .light_mode {
   --text-color: #343541;
