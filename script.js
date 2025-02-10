@@ -7,7 +7,7 @@ document.querySelector(".continue").addEventListener("click", function () {
 const chatInput = document.querySelector("#chat-input");
 const sendButton = document.querySelector("#send-btn");
 const chatContainer = document.querySelector(".chat-container");
-const themeButton = document.querySelectorAll("#theme-btn");
+// const themeButton = document.querySelector("#theme-btn");
 const deleteButton = document.querySelector("#delete-btn");
 
 let userText = null;
@@ -17,12 +17,12 @@ const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-
 const initialHeight = chatInput.scrollHeight;
 
 const loadDatafromLocalstorage = () => {
-  const themeColor = localStorage.getItem("theme-color");
+  // const themeColor = localStorage.getItem("theme-color");
 
-  document.body.classList.toggle("light_mode", themeColor === "light_mode");
-  themeButton.innerText = document.body.classList.contains("light_mode")
-    ? "dark_mode"
-    : "light_mode";
+  // document.body.classList.toggle("light_mode", themeColor === "light_mode");
+  // themeButton.innerText = document.body.classList.contains("light_mode")
+  //   ? "dark_mode"
+  //   : "light_mode";
 
   const defaultText = `<div class="default-text">
                         <h1>ChatGPT Clone</h1>
@@ -137,13 +137,25 @@ deleteButton.addEventListener("click", () => {
   }
 });
 
-themeButton.addEventListener("click", () => {
-  // Toggle the body's class for the theme mode and save the updated theme to the local storage
-  document.body.classList.toggle("light_mode");
-  localStorage.setItem("theme-color", themeButton.innerText);
-  themeButton.innerText = document.body.classList.contains("light_mode")
-    ? "dark_mode"
-    : "light_mode";
+// themeButton.addEventListener("click", () => {
+//   // Toggle the body's class for the theme mode and save the updated theme to the local storage
+//   document.body.classList.toggle("light_mode");
+//   localStorage.setItem("theme-color", themeButton.innerText);
+//   themeButton.innerText = document.body.classList.contains("light_mode")
+//     ? "dark_mode"
+//     : "light_mode";
+// });
+const themeButtons = document.querySelectorAll("#theme-btn");
+
+themeButtons.forEach((themeButton) => {
+  themeButton.addEventListener("click", () => {
+    document.body.classList.toggle("light_mode");
+    localStorage.setItem("theme-color", document.body.classList.contains("light_mode") ? "light_mode" : "dark_mode");
+
+    themeButtons.forEach((btn) => {
+      btn.innerText = document.body.classList.contains("light_mode") ? "dark_mode" : "light_mode";
+    });
+  });
 });
 
 chatInput.addEventListener("input", () => {
