@@ -72,7 +72,7 @@ const getChatResponse = async (incomingChatDiv) => {
   incomingChatDiv.querySelector(".typing-animation").remove();
   incomingChatDiv.querySelector(".chat-details").appendChild(textElement);
   // chatContainer.scrollTo(0, chatContainer.scrollHeight);
-  localStorage.setItem("all-chats", chatContainer.innerHTML)
+  localStorage.setItem("all-chats", chatContainer.innerHTML);
 }
 const copyResponse = (copyBtn) => {
   // Copy the text content of the response to the clipboard
@@ -126,6 +126,7 @@ const handleOutgoingChat = () => {
   setTimeout(showTypingAnimation, 500);
   //console.log(userText);
 }
+
 deleteButton.addEventListener("click", () => {
   // Remove the chats from local storage and call the loadDatafromLocalstorage function
   if (confirm("Are you sure you want to delete all the chats?")) {
