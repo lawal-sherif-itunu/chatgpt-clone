@@ -183,57 +183,6 @@ img.material-symbols-rounded {
   font-size: 1.1rem;
 }
 
-.typing-container .typing-content {
-  max-width: 950px;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-}
-
-.typing-content .typing-textarea {
-  width: 100%;
-  display: flex;
-  position: relative;
-}
-
-.typing-textarea textarea {
-  width: 100%;
-  height: 55px;
-  border: none;
-  resize: none;
-  font-size: 1rem;
-  max-height: 250px;
-  overflow-y: auto;
-  padding: 15px 45px 15px 20px;
-  color: var(--text-color);
-  border-radius: 4px;
-  color: var(--text-color);
-  background-color: var(--incoming-chat-bg);
-  outline: 1px solid var(--incoming-chat-border);
-}
-
-.typing-textarea textarea::placeholder {
-  color: var(--placeholder-color);
-}
-
-.typing-textarea span {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  visibility: hidden;
-  cursor: pointer;
-}
-
-.typing-textarea textarea:valid ~ span {
-  visibility: visible;
-}
-
-.typing-textarea span {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-}
-
 .typing-content span {
   height: 50px;
   width: 55px;
@@ -339,12 +288,61 @@ span.material-icons {
   color: var(--text-color);
 }
 
-.typing-textarea textarea,
+/* .typing-textarea textarea,
 .typing-textarea {
   height: 50px;
   /* text-align: center; */
+
+.typing-container .typing-content {
+  max-width: 950px;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.typing-content .typing-textarea {
+  width: 100%;
+  display: flex;
+  position: relative;
 }
 
 .typing-textarea textarea {
-  padding: 25px;
+  all: unset;
+  padding: 1rem;
+  width: 100%;
+  border: none;
+  resize: none;
+  font-size: 1rem;
+  max-height: 250px;
+  overflow-y: auto;
+  color: var(--text-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  background-color: var(--incoming-chat-bg);
+  outline: 1px solid var(--incoming-chat-border);
+}
+
+.typing-textarea textarea::placeholder {
+  color: var(--placeholder-color);
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+}
+
+.typing-textarea span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.typing-textarea textarea:valid ~ span {
+  visibility: visible;
+}
+
+.typing-textarea span {
+  position: absolute;
+  right: 0;
+  bottom: 0;
 }
